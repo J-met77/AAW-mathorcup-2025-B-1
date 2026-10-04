@@ -1,20 +1,20 @@
 # 📒 进度台账 · PROGRESS
 
-> 自动生成于 2026-10-04 20:27 | 数据源：`agent_workspace_B2/STATE.md`（主会话统一维护）
+> 自动生成于 2026-10-04 21:11 | 数据源：`agent_workspace_B2/STATE.md`（主会话统一维护）
 
 ## 总览
 
-- **总进度：4%** —— 已完成 **0** 个阶段，进行中 **1** 个，待开始 **12** 个
-- **当前阶段：G0 任务接收、环境自检与工作区初始化**
+- **总进度：27%** —— 已完成 **3** 个阶段，进行中 **1** 个，待开始 **9** 个
+- **当前阶段：A3 数据读取、清洗、缺失/异常处理与特征工程**
 
 ## 阶段状态表
 
 | 阶段 | 内容 | 状态 | 产物 |
 |---|---|---|---|
-| **G0** | 任务接收、环境自检与工作区初始化 | 🔄 进行中 | 00_admin/task_board.md, 00_admin/red_lines.md, 00_admin/decisions.md |
-| **A1** | 审题：子问题拆解、目标、约束与评价指标 | ⬜ 待开始 | 00_admin/A1_审题.md |
-| **A2** | 方法论依据与假设体系建立 | ⬜ 待开始 | 00_admin/A2_假设.md |
-| **A3** | 数据读取、清洗、缺失/异常处理与特征工程 | ⬜ 待开始 | code/*.py, output/logs/, 00_admin/A3_数据报告.md, output/tables/附件1_clean.csv, output/tables/附件2_clean.csv |
+| **G0** | 任务接收、环境自检与工作区初始化 | ✅ 完成 | 00_admin/task_board.md, 00_admin/red_lines.md, 00_admin/decisions.md, 00_admin/env_check.md, code/g0_env_check.py, output/logs/g0_env_check.log |
+| **A1** | 审题：子问题拆解、目标、约束与评价指标 | ✅ 完成 | 00_admin/A1_审题.md |
+| **A2** | 方法论依据与假设体系建立 | ✅ 完成 | 00_admin/A2_假设.md（假设 A2-01~20、方法论菜单 26 条；假设的数据证实/证伪由 A3 续核回填） |
+| **A3** | 数据读取、清洗、缺失/异常处理与特征工程 | 🔄 进行中 | code/*.py, output/logs/, 00_admin/A3_数据报告.md, output/tables/附件1_clean.csv, output/tables/附件2_clean.csv |
 | **A4** | 三问模型设计（变量/目标/约束/规则） | ⬜ 待开始 | 00_admin/A4_模型设计.md |
 | **A5** | 求解算法与评估方案设计 | ⬜ 待开始 | 00_admin/A5_算法方案.md |
 | **A6** | 代码实现、实验与结果产出（含 Result_提交.xlsx） | ⬜ 待开始 | code/*.py, output/logs/, output/Result_提交.xlsx |
@@ -27,17 +27,16 @@
 
 ## ✅ 已完成
 
-- （暂无）
+- ✅ **G0** 任务接收、环境自检与工作区初始化 → `00_admin/task_board.md, 00_admin/red_lines.md, 00_admin/decisions.md, 00_admin/env_check.md, code/g0_env_check.py, output/logs/g0_env_check.log`
+- ✅ **A1** 审题：子问题拆解、目标、约束与评价指标 → `00_admin/A1_审题.md`
+- ✅ **A2** 方法论依据与假设体系建立 → `00_admin/A2_假设.md（假设 A2-01~20、方法论菜单 26 条；假设的数据证实/证伪由 A3 续核回填）`
 
 ## 🔄 进行中
 
-- 🔄 **G0** 任务接收、环境自检与工作区初始化 → 目标产物：`00_admin/task_board.md, 00_admin/red_lines.md, 00_admin/decisions.md`
+- 🔄 **A3** 数据读取、清洗、缺失/异常处理与特征工程 → 目标产物：`code/*.py, output/logs/, 00_admin/A3_数据报告.md, output/tables/附件1_clean.csv, output/tables/附件2_clean.csv`
 
 ## ⬜ 待办
 
-- ⬜ **A1** 审题：子问题拆解、目标、约束与评价指标
-- ⬜ **A2** 方法论依据与假设体系建立
-- ⬜ **A3** 数据读取、清洗、缺失/异常处理与特征工程
 - ⬜ **A4** 三问模型设计（变量/目标/约束/规则）
 - ⬜ **A5** 求解算法与评估方案设计
 - ⬜ **A6** 代码实现、实验与结果产出（含 Result_提交.xlsx）
@@ -64,11 +63,12 @@
 
 ## 6. 当前状态
 
-- **当前阶段**：G0 进行中（真实派发模式启动）
-- **待办**：G0 规划产物 → A1 审题 → A2/A3 → A4 → A5 → A6 → A7/A8 → A9 → A10 → 视觉终检 → A11 → G9
+- **当前阶段**：A2（假设体系）与 A3（数据工程）并行进行中（A1 已完成，歧义 D1–D8 已仲裁，见 D09）
+- **待办**：A2∥A3 → A4 → A5 → A6 → A7/A8 并行 → A9 → A10 → 视觉终检 → A11 → G9
 
 ## 🕐 同步时间线
 
 <!-- TIMELINE-START -->
 | 2026-10-04 20:27 | 进度 4% | G0 任务接收、环境自检与工作区初始化 |
+| 2026-10-04 21:11 | 进度 27% | A3 数据读取、清洗、缺失/异常处理与特征工程 |
 <!-- TIMELINE-END -->

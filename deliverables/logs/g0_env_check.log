@@ -1,0 +1,50 @@
+# G0 环境自检  运行时间: 2026-10-04T20:30:33.246182
+# 工作区: C:\Users\21732\Desktop\2025b论文\agent_workspace_B2
+# Python: 3.13.14 (tags/v3.13.14:fd17997, Jun 10 2026, 13:03:48) [MSC v.1944 64 bit (AMD64)]
+
+## 1. 库可用性（逐个 import 测试）
+  [OK]   numpy        version=2.5.3
+  [OK]   pandas       version=3.0.5
+  [OK]   sklearn      version=1.9.1
+  [OK]   scipy        version=1.18.1
+  [OK]   matplotlib   version=3.11.2
+  [FAIL] statsmodels  ModuleNotFoundError: No module named 'statsmodels'
+  [OK]   openpyxl     version=3.1.5
+  [OK]   docx         version=1.2.0
+  [OK]   lightgbm     version=4.7.0
+  [OK]   xgboost      version=3.4.1
+  [FAIL] seaborn      ModuleNotFoundError: No module named 'seaborn'
+
+## 2. pandas 读取/写入引擎（openpyxl）往返测试
+  pandas 3.0.5 + openpyxl 引擎 写/读往返: OK
+
+## 3. data/ 四文件存在性与 xlsx 开放性（仅报 sheet 名与行列数，不读内容）
+  [存在] 赛题原文.md  size=8466 bytes
+      文本可读(utf-8), 行数=91
+  [存在] 附件1.xlsx  size=2143316 bytes
+      sheets=['sheet1']
+      sheet='sheet1'  max_row=11169  max_col=25
+  [存在] 附件2.xlsx  size=503356 bytes
+      sheets=['Sheet1']
+      sheet='Sheet1'  max_row=2794  max_col=25
+  [存在] Result.xlsx  size=33319 bytes
+      sheets=['Sheet1']
+      sheet='Sheet1'  max_row=2793  max_col=3
+
+## 4. matplotlib 中文字体可用性
+  matplotlib version=3.11.2, 已注册字体族数=266
+  常用中文字体命中: ['SimHei', 'Microsoft YaHei', 'SimSun', 'KaiTi', 'FangSong', 'DengXian', 'STSong', 'STKaiti', 'STXihei', 'LiSu', 'YouYuan']
+  其他疑似中文字体（前10）: ['Bradley Hand ITC', 'Lucida Handwriting', 'Microsoft JhengHei', 'Microsoft JhengHei Light', 'Microsoft JhengHei UI', 'Microsoft JhengHei UI Light', 'Microsoft YaHei Light', 'Microsoft YaHei UI', 'Microsoft YaHei UI Light', 'MingLiU-ExtB']
+
+## 5. pandoc
+  pandoc: 未找到（PATH 中不存在）
+
+## 6. 工作区目录结构（初始化后的约定子目录）
+  [已有] 00_admin/
+  [已有] code/
+  [已有] data/
+  [已有] output/
+  [已有] output/logs/
+  [已有] output/tables/
+  [已有] output/figures/
+  [已有] paper/
