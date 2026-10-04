@@ -1,0 +1,837 @@
+=== 01_data_explore start ===
+
+######################################################################
+FILE: 附件1.xlsx  sheets=['sheet1']
+
+======================================================================
+### 附件1.xlsx :: sheet[sheet1]  shape=(11168, 25)
+
+-- columns & dtypes --
+  '线路类型'                                   dtype=object         missing=0 (0.00%)
+  '是否c2c'                                  dtype=object         missing=0 (0.00%)
+  '是否生鲜妥投及时'                               dtype=object         missing=0 (0.00%)
+  '保价金额'                                   dtype=object         missing=0 (0.00%)
+  '始发城市'                                   dtype=object         missing=0 (0.00%)
+  '目的城市'                                   dtype=object         missing=0 (0.00%)
+  '寄件人id'                                  dtype=object         missing=0 (0.00%)
+  '收件人id'                                  dtype=object         missing=0 (0.00%)
+  '寄件是否内部'                                 dtype=object         missing=0 (0.00%)
+  '配送超时时长'                                 dtype=object         missing=0 (0.00%)
+  '异常原因'                                   dtype=str            missing=5432 (48.64%)
+  '进线渠道'                                   dtype=str            missing=94 (0.84%)
+  '妥投到进线时长'                                dtype=object         missing=0 (0.00%)
+  '索赔金额'                                   dtype=object         missing=0 (0.00%)
+  '商品类型'                                   dtype=str            missing=0 (0.00%)
+  '新旧程度'                                   dtype=object         missing=0 (0.00%)
+  '寄件B/C'                                  dtype=str            missing=0 (0.00%)
+  '进线人身份'                                  dtype=str            missing=0 (0.00%)
+  '始发网点发单量'                                dtype=object         missing=0 (0.00%)
+  '始发网点万单理赔率'                              dtype=object         missing=0 (0.00%)
+  '始发网点赔付比例'                               dtype=object         missing=0 (0.00%)
+  '目的网点发单量'                                dtype=object         missing=0 (0.00%)
+  '目的网点万单理赔率'                              dtype=object         missing=0 (0.00%)
+  '目的网点赔付比例'                               dtype=object         missing=0 (0.00%)
+  '实际赔付金额'                                 dtype=object         missing=0 (0.00%)
+
+-- head(5) --
+         线路类型                    是否c2c                   是否生鲜妥投及时                         保价金额           始发城市         目的城市         寄件人id        收件人id    寄件是否内部                       配送超时时长             异常原因               进线渠道                        妥投到进线时长                    索赔金额                             商品类型         新旧程度      寄件B/C          进线人身份                 始发网点发单量                 始发网点万单理赔率                         始发网点赔付比例               目的网点发单量               目的网点万单理赔率                       目的网点赔付比例              实际赔付金额
+0  route_type  is_customer_to_customer  is_fresh_and_delv_promise  waybill_price_protect_money  start_city_id  end_city_id  consigner_id  receiver_id  is_staff  plan_delv_to_real_delv_diff  abnormal_reason             source  real_delv_to_case_create_diff  payment_contract_money                   goods_category  goods_level  bc_source  customer_role  start_node_waybill_num  start_node_accident_rate  start_node_real_claim_num_ratio  end_node_waybill_num  end_node_accident_rate  end_node_real_claim_num_ratio  payment_real_money
+1           2                        0                          0                        1.402            146          125        183889       300000        -1                       427863           Damage  Internal Software                      723606396                  947.97  Apparel, Footwear & Accessories            0          C      Consigner                87493656                  0.308173                         0.999955              59508335                8.307474                       0.969815              144.51
+2           2                        1                          0                        0.971            309          117        147363       300000        -1                       427847           Damage               Call                      979969976                  992.87                          Jewelry            1          C      Consigner                 6468040                  7.689306                         0.995095             561600948               -0.926477                       0.961339              135.98
+3           2                        0                          0                       56.729            134            4         21570       146233        -1                       -23039              NaN               Call                         495475                  352.65                          Alcohol            1          C       Receiver                  236105                 52.158365                         0.996457                537698               31.083777                        0.99238              119.35
+4           2                        0                          1                       66.737            229          222        226496       308949        -1                       427699           Damage  Internal Software                        2055277                  264.29                  Household Goods            1          B       Receiver                   89775                  4.969987                         0.977141                432942                3.612905                       0.965113               74.85
+
+-- value_counts: 线路类型  (nunique=8) --
+线路类型
+2             9498
+3              634
+5              633
+1              336
+6               36
+4               18
+7               12
+route_type       1
+
+-- value_counts: 是否c2c  (nunique=3) --
+是否c2c
+0                          8344
+1                          2823
+is_customer_to_customer       1
+
+-- value_counts: 是否生鲜妥投及时  (nunique=3) --
+是否生鲜妥投及时
+0                            10527
+1                              640
+is_fresh_and_delv_promise        1
+
+-- value_counts: 保价金额  (nunique=10514) --
+保价金额
+ -1       42
+-0.999    19
+-0.998    14
+-0.995    11
+-0.988    10
+-0.996     9
+-0.985     9
+-0.991     8
+-0.997     8
+-0.984     7
+-0.979     7
+-0.934     6
+-0.99      6
+-0.994     6
+-0.967     5
+
+-- value_counts: 始发城市  (nunique=305) --
+始发城市
+0      381
+1      346
+25     327
+178    308
+2      258
+179    247
+222    245
+100    226
+13     221
+190    212
+151    207
+146    206
+4      199
+268    190
+3      187
+
+-- value_counts: 目的城市  (nunique=321) --
+目的城市
+178    533
+0      404
+1      386
+179    320
+222    271
+3      227
+132    203
+151    193
+190    168
+187    166
+100    162
+4      150
+13     147
+268    143
+125    130
+
+-- value_counts: 寄件人id  (nunique=2937) --
+寄件人id
+227346    971
+183889    659
+14084     135
+15877     122
+193650     85
+193886     84
+210232     72
+161906     62
+223752     50
+223753     43
+199261     41
+198779     40
+191336     34
+300000     33
+178621     33
+
+-- value_counts: 收件人id  (nunique=3900) --
+收件人id
+300000    1002
+212899      36
+102098      32
+322725      26
+453758      26
+243170      24
+15885       23
+352359      22
+229373      18
+12749       15
+166091      13
+208199      13
+45911       12
+260597      12
+192975      12
+
+-- value_counts: 寄件是否内部  (nunique=4) --
+寄件是否内部
+-1          10332
+1             779
+0              56
+is_staff        1
+
+-- value_counts: 配送超时时长  (nunique=4185) --
+配送超时时长
+427864    1133
+427863     453
+427862     319
+427861     225
+427860     195
+427859     172
+427858     141
+427857     133
+427856     131
+427852     111
+427855     104
+427854      96
+427851      96
+427847      88
+427853      84
+
+-- value_counts: 异常原因  (nunique=7) --
+异常原因
+NaN                5432
+Damage             2386
+Pickup Error       1953
+Suspected Lost     1384
+Shipping Error        6
+Handover Error        4
+Dangerous Goods       2
+abnormal_reason       1
+
+-- value_counts: 进线渠道  (nunique=7) --
+进线渠道
+Call                           6770
+Internal Software              2694
+Vendor Consultation             953
+Mini Program                    500
+Complaint                       155
+NaN                              94
+source                            1
+Merchant Compensation Claim       1
+
+-- value_counts: 妥投到进线时长  (nunique=11005) --
+妥投到进线时长
+-82055    7
+-82028    4
+-82044    4
+-76747    3
+-82020    3
+-81950    3
+-82050    3
+-81268    3
+-81393    3
+-82036    3
+-81795    2
+-82027    2
+-81871    2
+378693    2
+706685    2
+
+-- value_counts: 索赔金额  (nunique=10569) --
+索赔金额
+100.04     9
+100.01     8
+100.69     5
+100.94     4
+100.22     4
+100.08     4
+100.1      4
+100.02     4
+100.09     4
+100.29     4
+5498.77    4
+599.16     4
+100.23     4
+101.49     4
+101.7      3
+
+-- value_counts: 商品类型  (nunique=17) --
+商品类型
+Miscellaneous Goods                       2734
+Dried Groceries                           1158
+Hardware                                  1093
+Jewelry                                    708
+Pharmaceuticals                            696
+Furniture                                  572
+Alcohol                                    542
+Household Goods                            527
+Appliances                                 470
+Beauty & Daily Essentials                  423
+Fresh                                      390
+Documents & Bills                          389
+Maternity & Baby Products                  379
+Home Improvement and Building Material     375
+Electronic Product                         364
+
+-- value_counts: 新旧程度  (nunique=5) --
+新旧程度
+0              5745
+-1             4908
+1               506
+2                 8
+goods_level       1
+
+-- value_counts: 寄件B/C  (nunique=5) --
+寄件B/C
+B            5367
+C            4579
+Not Known    1083
+Staff         138
+bc_source       1
+
+-- value_counts: 进线人身份  (nunique=5) --
+进线人身份
+Consigner        6983
+Receiver         2808
+Unknown          1183
+Staff             193
+customer_role       1
+
+-- value_counts: 始发网点发单量  (nunique=10941) --
+始发网点发单量
+1515      18
+1516       6
+2          5
+1          4
+1528       4
+284        3
+1547       3
+1536       3
+-1         3
+20         3
+25         3
+52         3
+1421       2
+227187     2
+655905     2
+
+-- value_counts: 始发网点万单理赔率  (nunique=11143) --
+始发网点万单理赔率
+0.213211     2
+5.565459     2
+29.67301     2
+1.931037     2
+11.315288    2
+18.53152     2
+71.834361    2
+3.972729     2
+3.105954     2
+7.975432     2
+3.738633     2
+2.093318     2
+6.796128     2
+11.243385    2
+68.816064    2
+
+-- value_counts: 始发网点赔付比例  (nunique=11143) --
+始发网点赔付比例
+0.969889    2
+0.984286    2
+0.971631    2
+0.960642    2
+0.999066    2
+0.989027    2
+0.976821    2
+0.947287    2
+0.925971    2
+0.963951    2
+0.984704    2
+0.963015    2
+0.982697    2
+0.957421    2
+0.950615    2
+
+-- value_counts: 目的网点发单量  (nunique=11102) --
+目的网点发单量
+264442    2
+148032    2
+63175     2
+109618    2
+439168    2
+181205    2
+896042    2
+242993    2
+19497     2
+295792    2
+81208     2
+528549    2
+55414     2
+586419    2
+699081    2
+
+-- value_counts: 目的网点万单理赔率  (nunique=11143) --
+目的网点万单理赔率
+ 18.920482    2
+ 40.836269    2
+ 8.139083     2
+ 4.016592     2
+ 56.119184    2
+ 12.670857    2
+ 34.356397    2
+ 2.365047     2
+ 0.810266     2
+ 12.289224    2
+ 17.839861    2
+ 6.459808     2
+-0.750684     2
+ 2.197807     2
+ 64.979407    2
+
+-- value_counts: 目的网点赔付比例  (nunique=11141) --
+目的网点赔付比例
+0.890455    2
+0.919013    2
+0.982493    2
+0.989808    2
+0.866131    2
+0.899006    2
+0.989581    2
+0.996734    2
+0.964377    2
+0.989007    2
+0.994816    2
+0.994037    2
+0.977574    2
+0.628232    2
+0.881047    2
+
+-- value_counts: 实际赔付金额  (nunique=10145) --
+实际赔付金额
+13.53     4
+135.76    4
+45.56     4
+45.92     4
+46.81     4
+49.58     4
+37.35     4
+74.85     3
+64.59     3
+40.52     3
+93.45     3
+198.06    3
+34.98     3
+49.48     3
+117.87    3
+
+######################################################################
+FILE: 附件2.xlsx  sheets=['Sheet1']
+
+======================================================================
+### 附件2.xlsx :: sheet[Sheet1]  shape=(2793, 25)
+
+-- columns & dtypes --
+  '运单号'                                    dtype=object         missing=0 (0.00%)
+  '线路类型'                                   dtype=object         missing=0 (0.00%)
+  '是否c2c'                                  dtype=object         missing=0 (0.00%)
+  '是否生鲜妥投及时'                               dtype=object         missing=0 (0.00%)
+  '保价金额'                                   dtype=object         missing=0 (0.00%)
+  '始发城市'                                   dtype=object         missing=0 (0.00%)
+  '目的城市'                                   dtype=object         missing=0 (0.00%)
+  '寄件人id'                                  dtype=object         missing=0 (0.00%)
+  '收件人id'                                  dtype=object         missing=0 (0.00%)
+  '寄件是否内部'                                 dtype=object         missing=0 (0.00%)
+  '配送超时时长'                                 dtype=object         missing=0 (0.00%)
+  '异常原因'                                   dtype=str            missing=1363 (48.80%)
+  '进线渠道'                                   dtype=str            missing=24 (0.86%)
+  '妥投到进线时长'                                dtype=object         missing=0 (0.00%)
+  '索赔金额'                                   dtype=object         missing=0 (0.00%)
+  '商品类型'                                   dtype=str            missing=0 (0.00%)
+  '新旧程度'                                   dtype=object         missing=0 (0.00%)
+  '寄件B/C'                                  dtype=str            missing=0 (0.00%)
+  '进线人身份'                                  dtype=str            missing=0 (0.00%)
+  '始发网点发单量'                                dtype=object         missing=0 (0.00%)
+  '始发网点万单理赔率'                              dtype=object         missing=0 (0.00%)
+  '始发网点赔付比例'                               dtype=object         missing=0 (0.00%)
+  '目的网点发单量'                                dtype=object         missing=0 (0.00%)
+  '目的网点万单理赔率'                              dtype=object         missing=0 (0.00%)
+  '目的网点赔付比例'                               dtype=object         missing=0 (0.00%)
+
+-- head(5) --
+  运单号        线路类型                    是否c2c                   是否生鲜妥投及时                         保价金额           始发城市         目的城市         寄件人id        收件人id    寄件是否内部                       配送超时时长             异常原因               进线渠道                        妥投到进线时长                    索赔金额                 商品类型         新旧程度      寄件B/C          进线人身份                 始发网点发单量                 始发网点万单理赔率                         始发网点赔付比例               目的网点发单量               目的网点万单理赔率                       目的网点赔付比例
+0  ID  route_type  is_customer_to_customer  is_fresh_and_delv_promise  waybill_price_protect_money  start_city_id  end_city_id  consigner_id  receiver_id  is_staff  plan_delv_to_real_delv_diff  abnormal_reason             source  real_delv_to_case_create_diff  payment_contract_money       goods_category  goods_level  bc_source  customer_role  start_node_waybill_num  start_node_accident_rate  start_node_real_claim_num_ratio  end_node_waybill_num  end_node_accident_rate  end_node_real_claim_num_ratio
+1   1           2                        0                          0                        0.943            146          161        223753        82746        -1                       427849     Pickup Error  Internal Software                         211031                  680.57  Miscellaneous Goods           -1          C      Consigner                  504039                  0.069307                         0.990782                855542                0.403306                        0.99504
+2   2           2                        1                          0                        0.786            158          126        227346       341476        -1                       150511              NaN               Call                         311999                  723.25             Hardware           -1          B      Consigner                  326062                  -0.82151                         0.995804               2541530                -0.92914                       0.968897
+3   3           2                        0                          0                      411.188            178          179        205393       433022        -1                       139879           Damage  Internal Software                        1232135                  1551.5             Hardware            1          B      Consigner                  496895                  34.51069                          0.74477                246799                94.44991                       0.979394
+4   4           2                        0                          0                       -0.479            268            0        187738        42524        -1                       427754              NaN               Call                          58921                  727.31   Electronic Product            0          C      Consigner                  306519                  -0.69983                         0.994475               2259923                -0.98535                       0.997277
+
+-- value_counts: 运单号  (nunique=2793) --
+运单号
+ID    1
+1     1
+2     1
+3     1
+4     1
+5     1
+6     1
+7     1
+8     1
+9     1
+10    1
+11    1
+12    1
+13    1
+14    1
+
+-- value_counts: 线路类型  (nunique=8) --
+线路类型
+2             2396
+5              157
+3              138
+1               83
+6                7
+7                7
+4                4
+route_type       1
+
+-- value_counts: 是否c2c  (nunique=3) --
+是否c2c
+0                          2099
+1                           693
+is_customer_to_customer       1
+
+-- value_counts: 是否生鲜妥投及时  (nunique=3) --
+是否生鲜妥投及时
+0                            2611
+1                             181
+is_fresh_and_delv_promise       1
+
+-- value_counts: 保价金额  (nunique=2745) --
+保价金额
+ -1        6
+-0.998     4
+-0.074     3
+-0.988     3
+-0.978     3
+-0.479     2
+ 45.152    2
+ 2.981     2
+ 0.014     2
+-0.619     2
+ 0.26      2
+ 0.019     2
+-0.99      2
+ 1.629     2
+-0.798     2
+
+-- value_counts: 始发城市  (nunique=266) --
+始发城市
+0      94
+1      93
+2      83
+25     75
+146    70
+178    70
+13     66
+100    64
+151    63
+3      54
+179    53
+222    51
+190    49
+268    46
+99     46
+
+-- value_counts: 目的城市  (nunique=285) --
+目的城市
+178    119
+0      107
+1       98
+179     78
+3       66
+222     53
+190     50
+100     49
+132     47
+268     46
+187     44
+88      42
+102     40
+151     39
+13      38
+
+-- value_counts: 寄件人id  (nunique=1487) --
+寄件人id
+227346    258
+183889    143
+15877      40
+14084      28
+193886     19
+210232     18
+193650     15
+199261     14
+209602     13
+215974     13
+224840     12
+15441      11
+42471      10
+198779     10
+224826     10
+
+-- value_counts: 收件人id  (nunique=1914) --
+收件人id
+300000    250
+212899      9
+102098      8
+453758      7
+15885       7
+352359      6
+325932      6
+322725      5
+243170      5
+358938      5
+12749       5
+402212      4
+17506       4
+426409      4
+429934      4
+
+-- value_counts: 寄件是否内部  (nunique=4) --
+寄件是否内部
+-1          2579
+1            193
+0             20
+is_staff       1
+
+-- value_counts: 配送超时时长  (nunique=1216) --
+配送超时时长
+427864    301
+427863    117
+427862     71
+427861     62
+427860     49
+427858     33
+427857     33
+427856     30
+427859     30
+427849     28
+427853     24
+427854     24
+427851     24
+427855     22
+427848     21
+
+-- value_counts: 异常原因  (nunique=6) --
+异常原因
+NaN                1363
+Damage              595
+Pickup Error        491
+Suspected Lost      340
+Shipping Error        2
+abnormal_reason       1
+Handover Error        1
+
+-- value_counts: 进线渠道  (nunique=7) --
+进线渠道
+Call                           1693
+Internal Software               659
+Vendor Consultation             241
+Mini Program                    128
+Complaint                        46
+NaN                              24
+source                            1
+Merchant Compensation Claim       1
+
+-- value_counts: 妥投到进线时长  (nunique=2747) --
+妥投到进线时长
+474000000    3
+189000000    3
+392000000    2
+662000000    2
+814000000    2
+836000000    2
+295000000    2
+-82054       2
+-82005       2
+813000000    2
+791000000    2
+329000000    2
+811000000    2
+877000000    2
+-81928       2
+
+-- value_counts: 索赔金额  (nunique=2747) --
+索赔金额
+100.03     4
+100.13     3
+141.01     3
+100.01     3
+120.06     2
+1021.71    2
+100.19     2
+116.5      2
+576.23     2
+214.45     2
+1440.61    2
+163.08     2
+192.06     2
+448.89     2
+104.8      2
+
+-- value_counts: 商品类型  (nunique=17) --
+商品类型
+Miscellaneous Goods                       676
+Hardware                                  275
+Dried Groceries                           265
+Jewelry                                   180
+Pharmaceuticals                           166
+Furniture                                 161
+Alcohol                                   144
+Household Goods                           119
+Electronic Product                        111
+Home Improvement and Building Material    109
+Appliances                                106
+Apparel, Footwear & Accessories           102
+Fresh                                      99
+Beauty & Daily Essentials                  97
+Maternity & Baby Products                  96
+
+-- value_counts: 新旧程度  (nunique=5) --
+新旧程度
+0              1399
+-1             1276
+1               116
+goods_level       1
+2                 1
+
+-- value_counts: 寄件B/C  (nunique=5) --
+寄件B/C
+B            1358
+C            1117
+Not Known     280
+Staff          37
+bc_source       1
+
+-- value_counts: 进线人身份  (nunique=5) --
+进线人身份
+Consigner        1751
+Receiver          686
+Unknown           308
+Staff              47
+customer_role       1
+
+-- value_counts: 始发网点发单量  (nunique=2775) --
+始发网点发单量
+1515                      5
+30                        3
+9454                      2
+291                       2
+1516                      2
+190718                    2
+25973                     2
+1331                      2
+-1                        2
+743616                    2
+133021                    2
+419585                    2
+196                       2
+406                       2
+start_node_waybill_num    1
+
+-- value_counts: 始发网点万单理赔率  (nunique=2791) --
+始发网点万单理赔率
+-0.48743                     2
+ 47.40814                    2
+ start_node_accident_rate    1
+ 0.069307                    1
+-0.82151                     1
+ 34.51069                    1
+-0.69983                     1
+ 11.25108                    1
+ 19.25836                    1
+ 52.38458                    1
+ 47.82085                    1
+ 61.45768                    1
+ 8.481                       1
+ 2.026741                    1
+ 96.59377                    1
+
+-- value_counts: 始发网点赔付比例  (nunique=2701) --
+始发网点赔付比例
+0.99968     3
+0.999991    3
+0.999681    3
+0.999831    3
+0.98109     2
+0.994939    2
+0.999947    2
+0.999807    2
+0.998371    2
+0.990966    2
+0.999998    2
+0.999996    2
+0.999565    2
+0.982798    2
+0.998421    2
+
+-- value_counts: 目的网点发单量  (nunique=2781) --
+目的网点发单量
+7660000000              3
+560000000               2
+70629                   2
+762000000               2
+172000000               2
+204254                  2
+23144                   2
+51389                   2
+43803                   2
+61722                   2
+573956                  2
+end_node_waybill_num    1
+855542                  1
+2541530                 1
+246799                  1
+
+-- value_counts: 目的网点万单理赔率  (nunique=2791) --
+目的网点万单理赔率
+-0.99247                   2
+ 30.22474                  2
+ end_node_accident_rate    1
+ 0.403306                  1
+-0.92914                   1
+ 94.44991                  1
+-0.98535                   1
+-0.45596                   1
+ 7.09116                   1
+ 54.28817                  1
+ 46.21963                  1
+ 77.71412                  1
+ 23.50891                  1
+ 12.43215                  1
+ 55.43931                  1
+
+-- value_counts: 目的网点赔付比例  (nunique=2721) --
+目的网点赔付比例
+0.999965    3
+0.99504     2
+0.987237    2
+0.987001    2
+0.975247    2
+0.853999    2
+0.996941    2
+0.987615    2
+0.994346    2
+0.973762    2
+0.981518    2
+0.997314    2
+0.999317    2
+0.99365     2
+0.990884    2
+
+######################################################################
+FILE: Result.xlsx  sheets=['Sheet1']
+
+======================================================================
+### Result.xlsx :: sheet[Sheet1]  shape=(2792, 3)
+
+-- columns & dtypes --
+  '运单号'                                    dtype=int64          missing=0 (0.00%)
+  '实际赔付金额'                                 dtype=float64        missing=2792 (100.00%)
+  '风险标注'                                   dtype=float64        missing=2792 (100.00%)
+
+-- head(5) --
+   运单号  实际赔付金额  风险标注
+0    1     NaN   NaN
+1    2     NaN   NaN
+2    3     NaN   NaN
+3    4     NaN   NaN
+4    5     NaN   NaN
+
+-- numeric describe --
+         count    mean       std  min     25%     50%      75%     max
+运单号     2792.0  1396.5  806.1253  1.0  698.75  1396.5  2094.25  2792.0
+实际赔付金额     0.0     NaN       NaN  NaN     NaN     NaN      NaN     NaN
+风险标注       0.0     NaN       NaN  NaN     NaN     NaN      NaN     NaN
+
+=== 01_data_explore done ===

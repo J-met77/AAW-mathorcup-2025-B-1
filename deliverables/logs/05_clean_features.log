@@ -1,0 +1,10 @@
+=== 05_clean_features start ===
+F1 去英文行后：附件1=(11167, 25) 附件2=(2792, 25)
+清洗后缺失核查：附件1 缺失单元格总数 = 0
+清洗后缺失核查：附件2 缺失单元格总数 = 0
+索赔金额=100 精确计数（附件1）= 2 (0.0%)
+附件1 特征列数（含衍生）= 49，附件2 = 47
+新衍射列：['保价异常标记', '配送超时_饱和标记', '妥投进线_负值标记', '妥投进线_logabs', '始发网点理赔率负值标记', '目的网点理赔率负值标记', '始发网点发单量_log1p', '目的网点发单量_log1p', '始发网点万单理赔率_log1p', '目的网点万单理赔率_log1p', '始发网点赔付比例_log1p', '目的网点赔付比例_log1p', '保价金额_log1p', '索赔金额_log1p', '索赔金额_下限标记', '始发城市_freq', '目的城市_freq', '寄件人id_freq', '收件人id_freq', '异常原因_freq', '商品类型_freq', '城市对_freq']
+[saved] C:\Users\21732\Desktop\2025b论文\agent_workspace_B1\output\tables\附件1_clean.csv  (11167, 49)
+[saved] C:\Users\21732\Desktop\2025b论文\agent_workspace_B1\output\tables\附件2_clean.csv  (2792, 47)
+=== 05_clean_features done ===
