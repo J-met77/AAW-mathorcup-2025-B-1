@@ -1,0 +1,46 @@
+=== 07_q2_regression start ===
+特征数=42（数值32+类别10），n=11167
+
+--- 基线 ---
+      model        MAE       RMSE   MAPE_all  MAPE_pge1      WAPE
+   B0_中位数基线 199.024332 296.434869 245.571217 235.478211 68.102782
+B1_loglog线性 292.205585 405.937796  99.902287  99.906956 99.987841
+
+LGBM 候选配置数=20（fold-1 预筛）
+  cfg0 obj=l2 lr=0.05 leaves=31 mcs=20 log=False -> MAE=100.210 (0s)
+  cfg1 obj=l2 lr=0.05 leaves=31 mcs=50 log=False -> MAE=100.177 (1s)
+  cfg2 obj=l2 lr=0.05 leaves=63 mcs=20 log=False -> MAE=100.698 (1s)
+  cfg3 obj=l2 lr=0.05 leaves=63 mcs=50 log=False -> MAE=100.482 (2s)
+  cfg4 obj=l2 lr=0.1 leaves=31 mcs=20 log=False -> MAE=100.035 (2s)
+  cfg5 obj=l2 lr=0.1 leaves=31 mcs=50 log=False -> MAE=100.213 (2s)
+  cfg6 obj=l2 lr=0.1 leaves=63 mcs=20 log=False -> MAE=100.547 (3s)
+  cfg7 obj=l2 lr=0.1 leaves=63 mcs=50 log=False -> MAE=100.240 (3s)
+  cfg8 obj=l1 lr=0.05 leaves=31 mcs=20 log=False -> MAE=100.088 (5s)
+  cfg9 obj=l1 lr=0.05 leaves=31 mcs=50 log=False -> MAE=100.742 (5s)
+  cfg10 obj=l1 lr=0.05 leaves=63 mcs=20 log=False -> MAE=100.517 (6s)
+  cfg11 obj=l1 lr=0.05 leaves=63 mcs=50 log=False -> MAE=100.565 (7s)
+  cfg12 obj=l1 lr=0.1 leaves=31 mcs=20 log=False -> MAE=100.732 (8s)
+  cfg13 obj=l1 lr=0.1 leaves=31 mcs=50 log=False -> MAE=100.527 (8s)
+  cfg14 obj=l1 lr=0.1 leaves=63 mcs=20 log=False -> MAE=100.226 (9s)
+  cfg15 obj=l1 lr=0.1 leaves=63 mcs=50 log=False -> MAE=100.666 (9s)
+  cfg16 obj=l2 lr=0.05 leaves=31 mcs=20 log=True -> MAE=101.515 (10s)
+  cfg17 obj=l2 lr=0.05 leaves=63 mcs=20 log=True -> MAE=102.378 (10s)
+  cfg18 obj=l2 lr=0.1 leaves=31 mcs=20 log=True -> MAE=102.875 (10s)
+  cfg19 obj=l2 lr=0.1 leaves=63 mcs=20 log=True -> MAE=103.256 (11s)
+
+--- 预筛 top3 ---
+ cfg obj   lr  leaves  mcs  log_target  fold1_MAE  best_iter
+   4  l2 0.10      31   20       False 100.035491         46
+   8  l1 0.05      31   20       False 100.087711        714
+   1  l2 0.05      31   50       False 100.177344        121
+
+--- top3 五折 CV + OOF ---
+ cfg obj   lr  leaves  mcs  log_target  MAE_mean  MAE_std  RMSE_mean  MAPE_pge1_mean   OOF_MAE   OOF_RMSE  OOF_MAPE_pge1  OOF_WAPE  best_iter_median
+   8  l1 0.05      31   20       False 95.599508 2.636512 142.407436       76.183556 95.599898 142.545365      76.181650 32.712679               165
+   1  l2 0.05      31   50       False 96.936677 1.902388 139.439903       90.366688 96.936964 139.560276      90.360944 33.170200                82
+   4  l2 0.10      31   20       False 97.195576 1.800800 139.134298       92.527001 97.195758 139.237296      92.520768 33.258755                38
+
+>>> 选中配置：cfg8 obj=l1 lr=0.05 leaves=31 mcs=20 log_target=False  OOF MAE=95.600
+留出复验(80/20, seed=2025)：MAE=100.088 RMSE=153.133 MAPE(p>=1)=71.18% WAPE=33.01%
+[saved] q2_model_config.json, q2_cv_metrics.csv
+=== 07_q2_regression done ===
