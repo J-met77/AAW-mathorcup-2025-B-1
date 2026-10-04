@@ -36,6 +36,7 @@ X = df[FEATS].copy()
 for c in CAT:
     X[c] = X[c].astype('category')
 claim = df['索赔金额'].values.astype(float)
+pay = df['实际赔付金额'].values.astype(float)  # 路线B 回归目标（注意与分类标签 y 区分）
 
 def make_clf(class_weight=None, seed=SEED):
     return lgb.LGBMClassifier(objective='multiclass', num_class=3,
@@ -138,7 +139,7 @@ for f, (tri, vai) in enumerate(folds):
         learning_rate=cfg2['learning_rate'], num_leaves=cfg2['num_leaves'],
         min_child_samples=cfg2['min_child_samples'], n_estimators=cfg2['n_estimators'],
         random_state=SEED, deterministic=True, force_row_wise=True, verbose=-1, n_jobs=-1)
-    reg.fit(X.iloc[tri], y[tri])
+    reg.fit(X.iloc[tri], pay[tri])
     phat = np.maximum(reg.predict(X.iloc[vai]), 0)
     ub = np.maximum(claim[vai] - phat, 0)
     oof_b[vai] = apply_rule(phat, ub)

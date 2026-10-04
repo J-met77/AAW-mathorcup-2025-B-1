@@ -1,0 +1,5 @@
+=== 12_make_docx start ===
+转换层自检：全文无裸 $ / 无反斜杠命令 / 无 begin{} —— PASS
+[saved] C:\Users\21732\Desktop\2025b论文\agent_workspace_B1\paper\论文.docx
+段落数=132 表格数=5 插图数=8
+=== 12_make_docx done ===

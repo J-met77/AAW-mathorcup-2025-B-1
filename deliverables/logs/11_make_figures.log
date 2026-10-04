@@ -1,0 +1,10 @@
+=== 11_make_figures start ===
+[fig1] 标注规则二维散点 saved
+[fig2] 三类差额密度对比 saved
+[fig3] 赔付金额分布对比 saved
+[fig4] 回归误差分析 saved
+[fig5] 两路线混淆矩阵 saved
+[fig6] 不均衡方案对比 saved
+[fig7] 特征消融 saved
+[fig8] 规则敏感性热图 saved
+=== 11_make_figures done ===

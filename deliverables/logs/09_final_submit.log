@@ -1,0 +1,13 @@
+=== 09_final_submit start ===
+训练矩阵 (11167, 42)，推断矩阵 (2792, 42)
+问题2 推断：n=2792  min=0.00 max=1335.98 median=209.00 mean=267.61
+问题3 过采样后训练集：[9600, 4800, 4800]（原 [9600, 1336, 231]）
+问题3 推断分布：合理=89.58% 偏高=9.03% 严重=1.40%
+路线B 参考（不提交）：合理=90.47% 偏高=9.49% 严重=0.04%
+
+--- 提交自检 ---
+形状=(2792, 3) 运单号一致=True 无空值=True 标签合法=True 赔付非负=True
+提交分布：合理=89.58% 偏高=9.03% 严重=1.40%
+[saved] C:\Users\21732\Desktop\2025b论文\agent_workspace_B1\output\Result_提交.xlsx
+[saved] C:\Users\21732\Desktop\2025b论文\agent_workspace_B1\output\tables\附件2_predictions.csv
+=== 09_final_submit done ===
