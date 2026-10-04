@@ -1,0 +1,8 @@
+# 竞赛原始数据与本地路径不入仓库
+*.xlsx
+!deliverables/**/*.xlsx
+data/
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db
