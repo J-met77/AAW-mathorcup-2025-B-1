@@ -81,6 +81,11 @@ ax.plot([], [], color=PAL["navy"], lw=2.6, ls=(0, (5, 2)), label="边界 g2(x)�
 
 ax.set_xscale("log"); ax.set_yscale("log")
 ax.set_xlim(0.65, 3600); ax.set_ylim(0.06, 6000)
+# 对数轴刻度改纯 ASCII 标签（避免 mathtext 的 U+2212 负号在 SimHei 中缺字）
+from matplotlib.ticker import FuncFormatter
+_fmt = FuncFormatter(lambda v, _p: f"{v:g}")
+ax.xaxis.set_major_formatter(_fmt)
+ax.yaxis.set_major_formatter(FuncFormatter(lambda v, _p: f"{v:g}" if v >= 1 else f"{v:g}"))
 ax.set_xlabel("实际赔付金额 x（元，对数轴）", fontfamily=YH_FONT)
 ax.set_ylabel("超额幅度 e = 索赔金额 - 赔付（元，对数轴）", fontfamily=YH_FONT)
 ax.set_title("图2　问题1 标注几何：x-e 平面三类散点与保序阶梯边界（合理诉求抽样展示）",
