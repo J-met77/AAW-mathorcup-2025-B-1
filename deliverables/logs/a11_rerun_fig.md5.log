@@ -1,0 +1,10 @@
+== Q-14 复现抽检 fig3（脚本 code/a8_03_fig3_q1规则检验.py）==
+PNG md5 复跑=08980cdb366fd2b95bdfd0d2e4ff187e 交付态=08980cdb366fd2b95bdfd0d2e4ff187e -> BYTE-IDENTICAL
+日志 md5 复跑=e9c65a3e0522aeb53b99249b324e253d 交付态=e1fb7a584a7a08534aac04f5687cba09 -> DIFFER（日志含时间戳，属预期）
+判定：PASS
+
+== Q-14 复现抽检 fig8（脚本 code/a8_08_fig8_翻转带敏感性.py）==
+PNG md5 复跑=d19d2acad53a3485fcfd4cbfd19372a5 交付态=d19d2acad53a3485fcfd4cbfd19372a5 -> BYTE-IDENTICAL
+日志 md5 复跑=42e9651cfea0f84377f782c048c73c20 交付态=3525cb97ab23c402c1960075bd4e5342 -> DIFFER（日志含时间戳，属预期）
+判定：PASS
+

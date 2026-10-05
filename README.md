@@ -4,7 +4,7 @@
 
 **物流理赔风险识别及服务升级 —— 12-Agent 数模竞赛全流程盲测（真实派发模式）**
 
-![进度](https://img.shields.io/badge/总进度-85%25-2ea44f) ![当前阶段](https://img.shields.io/badge/当前阶段-A10-0969da) ![更新](https://img.shields.io/badge/更新-2026-10-05%2017%3A01-bf8700) ![流水线](https://img.shields.io/badge/流水线-12_Agents_真实派发-8250df)
+![进度](https://img.shields.io/badge/总进度-92%25-2ea44f) ![当前阶段](https://img.shields.io/badge/当前阶段-A11-0969da) ![更新](https://img.shields.io/badge/更新-2026-10-05%2018%3A00-bf8700) ![流水线](https://img.shields.io/badge/流水线-12_Agents_真实派发-8250df)
 
 </div>
 
@@ -20,16 +20,16 @@
 
 | 指标 | 值 |
 |---|---|
-| 当前阶段 | **A10 摘要撰写与全文润色、格式检查（全部阶段完成）** |
-| 总进度 | **85%**（11 完成 / 0 进行中 / 2 待开始） |
-| 最近更新 | 2026-10-05 17:01 |
+| 当前阶段 | **A11 独立质控：复现、一致性、合规终审（全部阶段完成）** |
+| 总进度 | **92%**（12 完成 / 0 进行中 / 1 待开始） |
+| 最近更新 | 2026-10-05 18:00 |
 
 ```mermaid
 pie showData
     title 任务阶段完成情况
-    "已完成" : 11
+    "已完成" : 12
     "进行中" : 0
-    "待开始" : 2
+    "待开始" : 1
 ```
 
 ## 📋 阶段进度总览
@@ -47,7 +47,7 @@ pie showData
 | **A8** | 论文级图表设计与产出 | ✅ 完成 | output/figures/fig1~fig8（8 张 300dpi，含 fig8 翻转带敏感性）、figures_清单.md（图注+章节映射），code/a8_*.py + 日志 |
 | **A9** | 竞赛论文正文撰写 | ✅ 完成 | paper/论文.md（53.1KB；六项核验全过、约 120 个数字点溯源、11 处事实性修正） |
 | **A10** | 摘要撰写与全文润色、格式检查 | ✅ 完成 | paper/摘要.md（865 字）, paper/论文.md（56.2KB，摘要占位已替换）, paper/论文.docx（177 段/6 表/8 图）, code/a10_01~02_*.py, output/logs/a10_*.log（自检五项 PASS，含裸 LaTeX 0 残片） |
-| **A11** | 独立质控：复现、一致性、合规终审 | ⬜ 待开始 | output/logs/qa_check.md, output/logs/qa_programmatic.log |
+| **A11** | 独立质控：复现、一致性、合规终审 | ✅ 完成 | output/logs/qa_check.md（Q-01…Q-20）, output/logs/qa_programmatic.log（110 项：106 PASS/4 WARN/0 FAIL）, code/a11_01_qa_check.py, a11_snapshots/（快照-恢复 15/15 md5 一致）；A11 定义为 plan 只读，其锁定计划由通用代理代执行（dispatch_log #22/#23） |
 | **G9** | 交付打包与最终清单核对 | ⬜ 待开始 | output/交付清单.md |
 
 ## 🏆 成果展示
