@@ -4,7 +4,7 @@
 
 **物流理赔风险识别及服务升级 —— 12-Agent 数模竞赛全流程盲测（真实派发模式）**
 
-![进度](https://img.shields.io/badge/总进度-73%25-2ea44f) ![当前阶段](https://img.shields.io/badge/当前阶段-A9-0969da) ![更新](https://img.shields.io/badge/更新-2026-10-05%2012%3A40-bf8700) ![流水线](https://img.shields.io/badge/流水线-12_Agents_真实派发-8250df)
+![进度](https://img.shields.io/badge/总进度-73%25-2ea44f) ![当前阶段](https://img.shields.io/badge/当前阶段-A9-0969da) ![更新](https://img.shields.io/badge/更新-2026-10-05%2013%3A00-bf8700) ![流水线](https://img.shields.io/badge/流水线-12_Agents_真实派发-8250df)
 
 </div>
 
@@ -22,7 +22,7 @@
 |---|---|
 | 当前阶段 | **A9 竞赛论文正文撰写** |
 | 总进度 | **73%**（9 完成 / 1 进行中 / 3 待开始） |
-| 最近更新 | 2026-10-05 12:40 |
+| 最近更新 | 2026-10-05 13:00 |
 
 ```mermaid
 pie showData
@@ -52,7 +52,7 @@ pie showData
 
 ## 🏆 成果展示
 
-- [📈 图表](deliverables/figures/) · [📦 提交结果](deliverables/result/)
+- [📄 论文与文档](deliverables/paper/) · [📈 图表](deliverables/figures/) · [📦 提交结果](deliverables/result/)
 - 结果摘要：[deliverables/result/result_摘要.md](deliverables/result/result_摘要.md)（A6 完成后可用）
 - 关键模型结论：见 [PROGRESS.md](PROGRESS.md)「关键模型结论」小节（随阶段实测更新）
 
