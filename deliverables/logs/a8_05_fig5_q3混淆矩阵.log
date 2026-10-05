@@ -1,0 +1,8 @@
+2026-10-05 11:12:34,696 [INFO] 字体核验：SimHei 可用=True
+2026-10-05 11:12:34,696 [INFO] 字体核验：Microsoft YaHei 可用=True
+2026-10-05 11:12:34,696 [INFO] rcParams.font.sans-serif=['SimHei', 'Microsoft YaHei']
+2026-10-05 11:12:34,696 [INFO] rcParams.axes.unicode_minus=False, savefig.dpi=300.0
+2026-10-05 11:12:34,996 [INFO] 分层5折_主种子池化 矩阵=[[9463, 113, 26], [501, 786, 53], [16, 137, 72]] 行和=[9602, 1340, 225]（support 一致）宏F1=0.6704 严重recall=0.3200
+2026-10-05 11:12:35,007 [INFO] 行序外推 矩阵=[[1893, 17, 1], [104, 154, 20], [3, 25, 16]] 行和=[1911, 278, 44]（support 一致）宏F1=0.6710 严重recall=0.3636
+2026-10-05 11:12:35,498 [INFO] 图已落盘：C:\Users\21732\Desktop\2025b论文\agent_workspace_B2\output\figures\fig5_q3混淆矩阵.png
+2026-10-05 11:12:35,499 [INFO] 完成：a8_05_fig5_q3混淆矩阵

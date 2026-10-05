@@ -48,7 +48,7 @@ for k, c in s_map.items():
     assert diff < 5e-4, f"V1 占比与数据不一致：{c}"
 R_vals = dict(re.findall(r"R_(\w)=([\d.]+)", v3))
 D_geo = float(re.search(r"D_geo=([\d.]+)", v4).group(1))
-rho = float(re.search(r"ρ=([\d.]+)", v4).group(1))
+rho = float(re.search(r"ρ=MAD\(合理\)/MAD\(严重\)=([\d.]+)", v4).group(1))
 m5 = dict(re.findall(r"(合|偏|严)=([\d.]+)", v5_note))
 for k, c in s_map.items():
     diff = abs(float(m5[k]) - med[c])
@@ -71,6 +71,7 @@ for patch, c in zip(bp["boxes"], CLASSES):
     patch.set_facecolor(CLASS_COLORS[c]); patch.set_alpha(0.75); patch.set_edgecolor("#333333")
 axa.set_yscale("log")
 axa.set_ylim(0.05, 9000)
+axa.set_xlim(0.4, 3.62)
 axa.yaxis.set_major_formatter(plt.FuncFormatter(lambda v, _p: f"{v:g}"))
 for i, c in enumerate(CLASSES):
     axa.text(i + 1 + 0.30, med[c], f"中位\n{med[c]:.1f}", fontsize=9.5, va="center",
@@ -85,6 +86,7 @@ for c in CLASSES:
     axb.hist(np.log10(e_by[c]), bins=bins, density=True, histtype="stepfilled",
              color=CLASS_COLORS[c], alpha=0.45, edgecolor=CLASS_COLORS[c], lw=1.2,
              label=c)
+axb.set_ylim(0, 2.75)
 axb.set_xlabel("log10(e)", fontfamily=YH_FONT)
 axb.set_ylabel("密度", fontfamily=YH_FONT)
 axb.set_title("(b) 三类 log10(e) 分布：合理类集中于低超额段，严重类居长尾（C6 密度差）",
