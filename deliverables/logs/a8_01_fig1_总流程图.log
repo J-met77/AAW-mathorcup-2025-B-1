@@ -1,7 +1,7 @@
-2026-10-05 11:01:25,217 [INFO] 字体核验：SimHei 可用=True
-2026-10-05 11:01:25,218 [INFO] 字体核验：Microsoft YaHei 可用=True
-2026-10-05 11:01:25,218 [INFO] rcParams.font.sans-serif=['SimHei', 'Microsoft YaHei']
-2026-10-05 11:01:25,218 [INFO] rcParams.axes.unicode_minus=False, savefig.dpi=300.0
-2026-10-05 11:01:25,606 [INFO] 溯源：n1=11167 n2=2792 三类占比=0.8599/0.1200/0.0201 变体A WAPE(分层5折均值)=0.3402 方式2宏F1=0.6603 方式1宏F1=0.6363
-2026-10-05 11:01:25,930 [INFO] 图已落盘：C:\Users\21732\Desktop\2025b论文\agent_workspace_B2\output\figures\fig1_建模总流程图.png
-2026-10-05 11:01:25,930 [INFO] 完成：a8_01_fig1_总流程图
+2026-10-05 11:01:46,509 [INFO] 字体核验：SimHei 可用=True
+2026-10-05 11:01:46,509 [INFO] 字体核验：Microsoft YaHei 可用=True
+2026-10-05 11:01:46,509 [INFO] rcParams.font.sans-serif=['SimHei', 'Microsoft YaHei']
+2026-10-05 11:01:46,509 [INFO] rcParams.axes.unicode_minus=False, savefig.dpi=300.0
+2026-10-05 11:01:46,902 [INFO] 溯源：n1=11167 n2=2792 三类占比=0.8599/0.1200/0.0201 变体A WAPE(分层5折均值)=0.3402 方式2宏F1=0.6603 方式1宏F1=0.6363
+2026-10-05 11:01:47,198 [INFO] 图已落盘：C:\Users\21732\Desktop\2025b论文\agent_workspace_B2\output\figures\fig1_建模总流程图.png
+2026-10-05 11:01:47,198 [INFO] 完成：a8_01_fig1_总流程图
