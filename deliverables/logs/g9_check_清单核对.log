@@ -1,0 +1,225 @@
+# G9 逐文件核对日志（code/g9_check_清单核对.py）
+# 工作区：C:\Users\21732\Desktop\2025b论文\agent_workspace_B2
+# 核对内容：存在性 + 字节大小 + md5；竞赛提交物另做只读结构复验
+# 红线声明：全程离线；仅读写本工作区；未修改任何他人产物
+
+## 组：竞赛提交物（期望 4 项）
+  [OK      ] output/Result_提交.xlsx                                      size=    55960 md5=a66012eaa89d01b6797f704f3f44d589
+  [OK      ] paper/论文.docx                                              size=  3503559 md5=8d4ffc151d339dd2611c7506b793ed88
+  [OK      ] paper/论文.md                                                size=    56157 md5=8247c2c715e0abe4cf944ef595233aaf
+  [OK      ] paper/摘要.md                                                size=     2830 md5=9a63869f5e0fc25625418b20a2f9eeaf
+  -> 组内 OK 4 / 4
+
+## 组：代码脚本（期望 35 项）
+  [OK      ] code/g0_env_check.py                                       size=     5476 md5=7894248f517f24c79338ce06f3efa685
+  [OK      ] code/a3_01_勘察.py                                           size=    15560 md5=3df6b4e82fd7fd0429af5d4580b35788
+  [OK      ] code/a3_02_疑点专项.py                                         size=    13413 md5=f52b425f24eae38414c3be46929ac3f4
+  [OK      ] code/a3_03_清洗.py                                           size=    10226 md5=200d69952bc57bbede88451825a74404
+  [OK      ] code/a3_04_目标关系.py                                         size=    11629 md5=302879c97a0ad2699b442332aee556b2
+  [OK      ] code/a3_05_对比漂移.py                                         size=     5814 md5=f4c89a036fbae3d5800a6e5730a7fcc9
+  [OK      ] code/a3_06_特征工程.py                                         size=    11245 md5=7d4163ea05e8762fd0a59035f71af691
+  [OK      ] code/a3_07_假设核验.py                                         size=     5079 md5=34893b4a20fe044720c8fe3aa3408780
+  [OK      ] code/a3_08_补列.py                                           size=     7545 md5=5cf3af272663f233a2dacbc220beee56
+  [OK      ] code/a6_common.py                                          size=    11009 md5=f9ab72cab7077164a8bb2f7c1c9d9a87
+  [OK      ] code/a6_q23_common.py                                      size=    20495 md5=9f414d47a7227934ca4c1d44dd3fd868
+  [OK      ] code/a6_01_q1_规则标注.py                                      size=    32961 md5=39b37c29c4db61c84a4f20da86dd4422
+  [OK      ] code/a6_02_q2搜索.py                                         size=     8147 md5=981324f9a45bef5d6fd3f82ce9064766
+  [OK      ] code/a6_03_q2双口径评估.py                                      size=    17046 md5=521dfc8aabb36e1280af7d609eca1a3c
+  [OK      ] code/a6_04_q2定稿预测.py                                       size=     6311 md5=5fb149a75b36f7ffdedc5494315c8ca4
+  [OK      ] code/a6_05_q3分类双路线.py                                      size=    32429 md5=64a99a3319456758cdc60ffce9dfd48e
+  [OK      ] code/a6_06_提交组装校验.py                                       size=     7538 md5=df3baa83b7d9ff92ccee596b0d7eaf18
+  [OK      ] code/a7_01_q1翻转带敏感性.py                                     size=    13211 md5=ee41c6f7637deaa5e06fb7c198f76054
+  [OK      ] code/a7_02_双口径分解.py                                        size=    15425 md5=2223a7ec8d7e1a4b0a552f304b9e76b3
+  [OK      ] code/a7_03_q2残差分析.py                                       size=    10606 md5=2e06fc6e0df6ed8d5ea2742cbd12ed56
+  [OK      ] code/a7_04_q3误差传导.py                                       size=    17928 md5=55bd9f52322e8850aa412e38162b0951
+  [OK      ] code/a7_05_稳健性汇总.py                                        size=    11464 md5=6d17375685b190d009b95026e4ef2baf
+  [OK      ] code/a8_00_图表公共.py                                         size=     3677 md5=0321d123350172dda2a6ec3eda851354
+  [OK      ] code/a8_01_fig1_总流程图.py                                    size=     6027 md5=49e39aa79b847bf35d4007092598336b
+  [OK      ] code/a8_02_fig2_q1标注几何.py                                  size=     6214 md5=60b58465b5bbfc992fcc48c15f438165
+  [OK      ] code/a8_03_fig3_q1规则检验.py                                  size=     5330 md5=b56c8192b2ece890507c7edd9d69d524
+  [OK      ] code/a8_04_fig4_q2性能.py                                    size=     5443 md5=a9d2fb398cff0523c1680b2c0a4a7410
+  [OK      ] code/a8_05_fig5_q3混淆矩阵.py                                  size=     3380 md5=d20334f859398b7fbec8bc822a7bc96a
+  [OK      ] code/a8_06_fig6_q3路线消融.py                                  size=     7191 md5=e5748553856516ffa04b1fb32bfca95b
+  [OK      ] code/a8_07_fig7_附件2预测.py                                   size=     4274 md5=e1d69a085d83c7d11edca7e53f6ca209
+  [OK      ] code/a8_08_fig8_翻转带敏感性.py                                  size=    10021 md5=668de6306f7e86940ad19bbd2676346d
+  [OK      ] code/a10_01_make_docx.py                                   size=    13666 md5=67b3f01ad3ff7dad07fea9195f23e88f
+  [OK      ] code/a10_02_format_check.py                                size=     8526 md5=32494bec7f7a0b708b5e26fc5bd2ad99
+  [OK      ] code/a11_01_qa_check.py                                    size=    70623 md5=e4bcb8378225b0b09848c1fc8fca129e
+  [OK      ] code/g9_check_清单核对.py                                      size=    18737 md5=8dbd86d3a38a00d6a5ccb6ad2a32d661
+  -> 组内 OK 35 / 35
+
+## 组：运行日志（期望 42 项）
+  [OK      ] output/logs/g0_env_check.log                               size=     2233 md5=23820cec8a88b99d7911969591e09328
+  [OK      ] output/logs/a3_01_勘察.log                                   size=    21790 md5=899a3c18d543fb17d4ce8b302c14b1f5
+  [OK      ] output/logs/a3_02_疑点专项.log                                 size=    10625 md5=0cb20a4bc8ea43bacfd16a588b452d59
+  [OK      ] output/logs/a3_03_清洗.log                                   size=     6162 md5=f52fee625a1df8ed462f9c92cbd249d3
+  [OK      ] output/logs/a3_04_目标关系.log                                 size=    13047 md5=5da8fb691f9e27448a2c8ee4f4cec62f
+  [OK      ] output/logs/a3_05_对比漂移.log                                 size=     9678 md5=5fccff411a544037635e5bb758ab10c3
+  [OK      ] output/logs/a3_06_特征工程.log                                 size=     7276 md5=2a7aa2149515fa6a42b6eef50f3787ae
+  [OK      ] output/logs/a3_07_假设核验.log                                 size=     2118 md5=8ff65363d6267330a5abacbcbefe7baf
+  [OK      ] output/logs/a3_08_补列.log                                   size=     8411 md5=1a3a0664c16afb98f2e510acff680219
+  [OK      ] output/logs/a6_01_q1规则标注.log                               size=     4298 md5=cd7f0ab99ead61d1aa1e7dcde27a4710
+  [OK      ] output/logs/a6_02_q2搜索.log                                 size=    16649 md5=07372a2a718ce37da114a5caf7185284
+  [OK      ] output/logs/a6_03_q2双口径评估.log                              size=     5852 md5=0b1fd8ad15483d484d9ac4a3713afaf1
+  [OK      ] output/logs/a6_04_q2定稿预测.log                               size=     2378 md5=345630c3191d2cc8db1bdad1d12de123
+  [OK      ] output/logs/a6_05_q3双路线.log                                size=    14000 md5=59a055ef0157fe457ef7837df4e56589
+  [OK      ] output/logs/a6_06_提交组装校验.log                               size=     2541 md5=f929efc130ffe8ca0fa135a058827563
+  [OK      ] output/logs/a6_阻断上报.md                                     size=     4294 md5=f11fe97a1d1c570f8e00dfb56fcaef5b
+  [OK      ] output/logs/a7_01_翻转带敏感性.log                               size=     2876 md5=4ca72759e8b34552a36fee39928c9c99
+  [OK      ] output/logs/a7_02_双口径分解.log                                size=     2162 md5=d94b434025397f5baec54ee40ee73562
+  [OK      ] output/logs/a7_03_q2残差分析.log                               size=      966 md5=1e7a917dac0a2f0675110dbc076e0e51
+  [OK      ] output/logs/a7_04_q3误差传导.log                               size=     2515 md5=759166e98bbbc15f305bbfbc06b9d60e
+  [OK      ] output/logs/a7_05_稳健性汇总.log                                size=      311 md5=485f2bd836716f0e4b80916be8194d02
+  [OK      ] output/logs/a8_01_fig1_总流程图.log                            size=      692 md5=d0345da504b1ba0c6d46249ff55129d9
+  [OK      ] output/logs/a8_02_fig2_q1标注几何.log                          size=     1181 md5=c8f8874672a3f238556671bf01a4c3c3
+  [OK      ] output/logs/a8_03_fig3_q1规则检验.log                          size=     1577 md5=e1fb7a584a7a08534aac04f5687cba09
+  [OK      ] output/logs/a8_04_fig4_q2性能.log                            size=     1672 md5=55c1060d9d6ee8531d661cb6e24cbd8c
+  [OK      ] output/logs/a8_05_fig5_q3混淆矩阵.log                          size=      884 md5=ff138fd110a89a1d555fb4b7cfcccc93
+  [OK      ] output/logs/a8_06_fig6_q3路线消融.log                          size=     1231 md5=a74e2c975bfe6dd4b6359163a09a3fe6
+  [OK      ] output/logs/a8_07_fig7_附件2预测.log                           size=      970 md5=cb8b39a0d443f4a147d8cb7b6176614a
+  [OK      ] output/logs/a8_08_fig8_翻转带敏感性.log                          size=     1514 md5=3525cb97ab23c402c1960075bd4e5342
+  [OK      ] output/logs/a8_fig4_刷新前.md5                                size=       67 md5=521f1f5188d80b33a74cf75226ab3f0a
+  [OK      ] output/logs/a10_00_polish.log                              size=     1087 md5=fc7c1d92616f4f37c4a0f5331e80714a
+  [OK      ] output/logs/a10_01_make_docx.log                           size=     1309 md5=821d3758c4163298d039341dd6dfd54e
+  [OK      ] output/logs/a10_02_format_check.log                        size=     2438 md5=47741c3410d235d8a1ca33697ed8dcf2
+  [OK      ] output/logs/a11_rerun_a6_01.log                            size=     4298 md5=051c867beaf1e880b0f8b65a1223c2df
+  [OK      ] output/logs/a11_rerun_a6_06.log                            size=     2541 md5=7eb933ff3f3bffa65150bb7a6662a54f
+  [OK      ] output/logs/a11_rerun_fig.md5.log                          size=      690 md5=7033f252fe81d9cdb24f625d8456d450
+  [OK      ] output/logs/a11_snapshots/md5_manifest.txt                 size=     1451 md5=6fa4c383e7fbd1eb51e48ef32ecb5592
+  [OK      ] output/logs/a11_snapshots/restore_md5_evidence.txt         size=     1532 md5=8c7caa138a524ac907707a7382ceaa9c
+  [OK      ] output/logs/qa_check.md                                    size=    21672 md5=695fe913fae7ef09b09a92b39ddbfc9a
+  [OK      ] output/logs/qa_programmatic.log                            size=    24547 md5=a0dd7e6aa766d973110ad31aece856fc
+  [OK      ] output/logs/render_gate.ps1                                size=      583 md5=da5c9608635c938c6134a82610034e1b
+  [OK      ] output/logs/论文_render.pdf                                  size=  1559531 md5=b5a0c627a594b1381c265e10ebc67af2
+  -> 组内 OK 42 / 42
+
+## 组：结果表格（期望 40 项）
+  [OK      ] output/tables/q1_定稿配置.json                                 size=     1735 md5=3a28ae8bd2c93f30f32d85bd88d2c0a1
+  [OK      ] output/tables/q1_对偶报告.csv                                  size=      439 md5=de2e8a5ad27b7774dd00e7126977360c
+  [OK      ] output/tables/q1_择优日志.csv                                  size=    42171 md5=92e6cf7e9a58fd8a4ecae7d0d12b56d0
+  [OK      ] output/tables/q1_自检表.csv                                   size=     1729 md5=67187a2315ed64792c05ad27eca87e7d
+  [OK      ] output/tables/q1_边界_bootstrapCI.csv                        size=      585 md5=cc2324acfe9ebe9d0ebeb3771ea8a7eb
+  [OK      ] output/tables/q1_边界表.csv                                   size=      385 md5=5868a50067c975120397cf21cfd1fb5c
+  [OK      ] output/tables/q2_oof预测.csv                                 size=  5012218 md5=d4d8bb6b958695f580db72e7a36c9ea1
+  [OK      ] output/tables/q2_定稿配置.json                                 size=     2133 md5=b28e7fdd867c8557f4c4a4ebe525b56d
+  [OK      ] output/tables/q2_指标汇总.csv                                  size=     9481 md5=46b55e5e8612f103b853e28c5c062882
+  [OK      ] output/tables/q2_搜索日志.csv                                  size=     8683 md5=02a9ccd53f4e6cf15b41d8a0b9b947fb
+  [OK      ] output/tables/q2_搜索选优.json                                 size=     2437 md5=dce1d6bad01dc727acb2162b3ed10843
+  [OK      ] output/tables/q3_两路线对比.csv                                 size=     2831 md5=4f0e3a4ea2f147b7b9652fd705080f5a
+  [OK      ] output/tables/q3_定稿配置.json                                 size=     2629 md5=ab83e04eee15fcd472a655380717f873
+  [OK      ] output/tables/q3_指标汇总.csv                                  size=     2293 md5=825f1637ebecc98ef355a76fdc37fc54
+  [OK      ] output/tables/q3_方式1误差联合.csv                               size=      287 md5=94a9ffc9c075ba5e014f7937a5533c44
+  [OK      ] output/tables/q3_消融矩阵.csv                                  size=     5375 md5=878b900d26355ba3671d50e9437dd6d7
+  [OK      ] output/tables/q3_混淆矩阵.csv                                  size=      940 md5=a83f7bc948f538583cb7e4ac2d03264d
+  [OK      ] output/tables/a7_q2残差分析.csv                                size=     3661 md5=7ef28a7b868ee1db307d4bc702fdddb5
+  [OK      ] output/tables/a7_q3误差传导.csv                                size=     3333 md5=87befee32f5533a574ec86f86c3e6550
+  [OK      ] output/tables/a7_双口径分解.csv                                 size=      773 md5=b44ca40ba8fd600f78a4b8380a10bbd9
+  [OK      ] output/tables/a7_双口径分解_bootstrap.csv                       size=      833 md5=013d9899493889842932590521f2b801
+  [OK      ] output/tables/a7_双口径分解_分布对比.csv                            size=      723 md5=c9a4c622f5aa79ee4ab4bb7f7edc77ef
+  [OK      ] output/tables/a7_稳健性汇总.csv                                 size=     6244 md5=16931af7c526ef234f5f3a04ab23e541
+  [OK      ] output/tables/a7_翻转带敏感性.csv                                size=     2279 md5=01e1d07c4150daed16c4459f8dad8f4b
+  [OK      ] output/tables/a7_翻转带画像.csv                                 size=     1694 md5=ecf5c31416a150b7eaa14a66a553fe74
+  [OK      ] output/tables/a7_翻转带画像_边界CI.csv                            size=      869 md5=26449d7f19361a8220380e9c67b64cff
+  [OK      ] output/tables/附件1_clean.csv                                size=  6005690 md5=d5842f8bec9b35de36732ed47b6c75d1
+  [OK      ] output/tables/附件2_clean.csv                                size=  1129609 md5=0846d4b032f27d6471c3bc108fdcaf29
+  [OK      ] output/tables/附件1_风险标注.csv                                 size=   497402 md5=ed5274a6b13ab5b5641d04fb6e0fa7c4
+  [OK      ] output/tables/附件2_赔付预测.csv                                 size=    54386 md5=f82fe92df96472a0eb8bd23dfb390877
+  [OK      ] output/tables/附件2_风险预测.csv                                 size=    51968 md5=cde4831046c1bd05ec5330ed60a02eea
+  [OK      ] output/tables/sensitivity_a7/a7_q2残差分析.csv                 size=     3661 md5=7ef28a7b868ee1db307d4bc702fdddb5
+  [OK      ] output/tables/sensitivity_a7/a7_q3误差传导.csv                 size=     3333 md5=87befee32f5533a574ec86f86c3e6550
+  [OK      ] output/tables/sensitivity_a7/a7_双口径分解.csv                  size=      773 md5=b44ca40ba8fd600f78a4b8380a10bbd9
+  [OK      ] output/tables/sensitivity_a7/a7_双口径分解_bootstrap.csv        size=      833 md5=013d9899493889842932590521f2b801
+  [OK      ] output/tables/sensitivity_a7/a7_双口径分解_分布对比.csv             size=      723 md5=c9a4c622f5aa79ee4ab4bb7f7edc77ef
+  [OK      ] output/tables/sensitivity_a7/a7_稳健性汇总.csv                  size=     6244 md5=16931af7c526ef234f5f3a04ab23e541
+  [OK      ] output/tables/sensitivity_a7/a7_翻转带敏感性.csv                 size=     2279 md5=01e1d07c4150daed16c4459f8dad8f4b
+  [OK      ] output/tables/sensitivity_a7/a7_翻转带画像.csv                  size=     1694 md5=ecf5c31416a150b7eaa14a66a553fe74
+  [OK      ] output/tables/sensitivity_a7/a7_翻转带画像_边界CI.csv             size=      869 md5=26449d7f19361a8220380e9c67b64cff
+  -> 组内 OK 40 / 40
+
+## 组：论文图表（期望 9 项）
+  [OK      ] output/figures/fig1_建模总流程图.png                             size=   511543 md5=9b01534d51afa1247565eec438ca9d03
+  [OK      ] output/figures/fig2_q1标注几何.png                             size=   742225 md5=05bf543c49b966e9f550ab1a65a07acd
+  [OK      ] output/figures/fig3_q1规则检验.png                             size=   340494 md5=08980cdb366fd2b95bdfd0d2e4ff187e
+  [OK      ] output/figures/fig4_q2性能.png                               size=   408382 md5=e7b8dc3e3443c3fed2973c487533e2cf
+  [OK      ] output/figures/fig5_q3混淆矩阵.png                             size=   401464 md5=d9aa5f3aa924cefb2ce811b83cf8a162
+  [OK      ] output/figures/fig6_q3路线消融.png                             size=   450512 md5=45d3cb3e6028d5788ba32b14be754364
+  [OK      ] output/figures/fig7_附件2预测分布.png                            size=   313283 md5=22d2f32f3aa1c341bc82e4222dd45ddb
+  [OK      ] output/figures/fig8_翻转带敏感性.png                             size=   566889 md5=d19d2acad53a3485fcfd4cbfd19372a5
+  [OK      ] output/figures/figures_清单.md                               size=    13088 md5=d97f7bcbcf6c409a9051209df1d4e518
+  -> 组内 OK 9 / 9
+
+## 组：管理文档与台账（期望 13 项）
+  [OK      ] 00_admin/task_board.md                                     size=    10851 md5=d0cebc3f497126973da799f0cb1bbdcc
+  [OK      ] 00_admin/red_lines.md                                      size=     2463 md5=b89322319841b400d8b2ebe4edc32550
+  [OK      ] 00_admin/decisions.md                                      size=     4309 md5=1835deac18e245cbcf72bb596c740db2
+  [OK      ] 00_admin/env_check.md                                      size=     3150 md5=4f06853d012b627410293b744a9bd004
+  [OK      ] 00_admin/dispatch_log.md                                   size=    12157 md5=56f540eb3bb7c32883e6ee30a009bd87
+  [OK      ] 00_admin/automation_备份.md                                  size=     2905 md5=48a56424371cd7f14c1f4fab04d57de3
+  [OK      ] 00_admin/A1_审题.md                                          size=    18650 md5=727522fd6b0fabe2d3948f8f4223030f
+  [OK      ] 00_admin/A2_假设.md                                          size=    34265 md5=a23d3034f867dcbc119c23a1848b738d
+  [OK      ] 00_admin/A3_数据报告.md                                        size=    28606 md5=73aabc504c77506c729532449c07b429
+  [OK      ] 00_admin/A4_模型设计.md                                        size=    35619 md5=63b328c08c2f05cc1ac6fcd07419475b
+  [OK      ] 00_admin/A5_算法方案.md                                        size=    42632 md5=a42458eb44eeb0b45427dd942efb3ac9
+  [OK      ] 00_admin/A7_结果分析.md                                        size=    26680 md5=17f69e5e46030dfea5f22123a3f48d5e
+  [OK      ] STATE.md                                                   size=    13472 md5=706dfc86377e2c6f40c756de10c8f72b
+  -> 组内 OK 13 / 13
+
+## 组：论文渲染页（期望 25 项）
+  [OK      ] output/render_pages/page_01.png                            size=   301430 md5=40f7f6f717816726b7bcf71315bf7ec0
+  [OK      ] output/render_pages/page_02.png                            size=   319118 md5=6c24705fc734cd4620c0f787a707a607
+  [OK      ] output/render_pages/page_03.png                            size=   366424 md5=dfda10e02d4c76519af3e0a8d486ad78
+  [OK      ] output/render_pages/page_04.png                            size=   299534 md5=8f80f1547b126babcf48fa276b128e93
+  [OK      ] output/render_pages/page_05.png                            size=   297719 md5=129c6d8359152ce92ba754a9db3cf13f
+  [OK      ] output/render_pages/page_06.png                            size=   302173 md5=b7b7e175daf19bc9685799d8e39b8126
+  [OK      ] output/render_pages/page_07.png                            size=   256613 md5=dffbed1758d71b99459b2bb7ad8add8a
+  [OK      ] output/render_pages/page_08.png                            size=   303368 md5=f51e8b45b15be3245f5fd569ff19335f
+  [OK      ] output/render_pages/page_09.png                            size=   239952 md5=27be426863c27d01c5df4c5ba3c0bbc6
+  [OK      ] output/render_pages/page_10.png                            size=   322467 md5=4f42cb4c57fe89e2ae988a057f05715a
+  [OK      ] output/render_pages/page_11.png                            size=   221099 md5=6acccaff43c5e20c46c56c462bf3fe07
+  [OK      ] output/render_pages/page_12.png                            size=   315857 md5=f81f1398f209a5f412f3dd03ca9b09de
+  [OK      ] output/render_pages/page_13.png                            size=   304533 md5=a02e08e22261c90e252eb3e67f86f2f4
+  [OK      ] output/render_pages/page_14.png                            size=   275228 md5=846ae3d516411839c68ed146f3fc7c5a
+  [OK      ] output/render_pages/page_15.png                            size=   292112 md5=928e6405d46f8e73c8a629b931f8dad9
+  [OK      ] output/render_pages/page_16.png                            size=   328178 md5=03cfcfa8666efdd854b19da5512d3bcb
+  [OK      ] output/render_pages/page_17.png                            size=   285705 md5=0f5299817d5c992f834332305a1d3f12
+  [OK      ] output/render_pages/page_18.png                            size=   264273 md5=3b1d061cf47a9e6ecb50716d7e5a1ce6
+  [OK      ] output/render_pages/page_19.png                            size=   297574 md5=02ef378236e8cc094541c2b8f85d7ab6
+  [OK      ] output/render_pages/page_20.png                            size=   313135 md5=cee7ade63771b707c0a22ef3f3ccdf79
+  [OK      ] output/render_pages/page_21.png                            size=   314811 md5=489c39da88868a93ce8726d8cdbfae33
+  [OK      ] output/render_pages/page_22.png                            size=   283417 md5=31c50a489873f247af3f0474911bd20c
+  [OK      ] output/render_pages/page_23.png                            size=   274264 md5=b47c7c0b2c17c5e5a877dbe5ea04fdfc
+  [OK      ] output/render_pages/page_24.png                            size=   323798 md5=d1b1a2c5a0b9c671d32ffc0e3a87a6a4
+  [OK      ] output/render_pages/page_25.png                            size=    55404 md5=7b2051088ef5b1461d4ce31e223a4386
+  -> 组内 OK 25 / 25
+
+## 组：输入数据（期望 4 项）
+  [OK      ] data/赛题原文.md                                               size=     8466 md5=373f2990ea72b5ae5ceccc114ba41ac1
+  [OK      ] data/附件1.xlsx                                              size=  2143316 md5=85fca7540f63f33deaa391f384019046
+  [OK      ] data/附件2.xlsx                                              size=   503356 md5=21ef01f522e71271e24df8caf0d0bed3
+  [OK      ] data/Result.xlsx                                           size=    33319 md5=e0f03a72816fc2d858dab7ef9c0c5c58
+  -> 组内 OK 4 / 4
+
+## 自身日志（本脚本产出）
+  [SELFLOG ] output/logs/g9_check_清单核对.log（运行结束时统计）
+
+## 结构复验（竞赛提交物，只读）
+  Result_提交.xlsx 复验：shape=(2792,3)=PASS；列名=[运单号,实际赔付金额,风险标注]=PASS；标签域={合理诉求,诉求偏高,严重超额}=PASS；占比 2518/254/20 = 90.19/9.10/0.72%=PASS；金额非负两位小数 min=8.12 max=1455.73=PASS；运单号与附件2_clean 逐行零改动=PASS；运单号与模板 Result.xlsx 逐行零改动=PASS；总额=838938.35 元
+  Result md5=a66012eaa89d01b6797f704f3f44d589 与 qa_check Q-01 记载 a66012eaa89d01b6797f704f3f44d589 -> MATCH
+  论文.docx 复验：段落=177 表格=6 内嵌图=8 摘要=True 关键词=True
+  摘要一致性：摘要.md 正文 与 论文.md 摘要节 逐字相等=True；含关键词行非空白字符=1049
+  （对齐 A11 Q-18② 口径：正文去关键词行 1012、含关键词行 1049；差异仅允许为章节分隔符）
+  论文.md 图片引用=8 处（期望 8，Q-08 口径）
+  Q2 交叉核对：变体A 分层3种子均值 WAPE=0.3402（期望 0.3402）、行序=0.3357（期望 0.3357）-> PASS
+  Q3 交叉核对：方式2 分层主种子 宏F1=0.6704（期望 0.6704）、行序=0.6710（期望 0.6710）-> PASS
+  Q1 交叉核对：theta_star=[5, 0.86, 0.98]；占比 0.8599/0.1200/0.0201（期望 0.8599/0.1200/0.0201）-> PASS
+  a6_01 日志重建确认：size=4298 字节（>0 即已由主会话 17:59 重跑重建，WARN③ 处置落位）-> PASS
+  渲染页数=25（期望 25）、图 PNG 数=8（期望 8）-> PASS
+
+## 目录余量扫描（期望清单之外的实际文件）
+  无目录余量：工作区交付相关目录内文件均已列入期望清单。
+
+## 汇总判定
+  逐文件核对：期望 172 项，OK 172，MISSING 0，EMPTY(0字节) 0
+  结构复验失败项：0 
+  总判定：PASS —— 交付包逐文件齐备，结构复验全过
+  （G9 交付清单以本日志为准编制：output/交付清单.md）
