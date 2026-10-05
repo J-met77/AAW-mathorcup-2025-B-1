@@ -4,7 +4,7 @@
 
 **物流理赔风险识别及服务升级 —— 12-Agent 数模竞赛全流程盲测（真实派发模式）**
 
-![进度](https://img.shields.io/badge/总进度-73%25-2ea44f) ![当前阶段](https://img.shields.io/badge/当前阶段-A9-0969da) ![更新](https://img.shields.io/badge/更新-2026-10-05%2015%3A00-bf8700) ![流水线](https://img.shields.io/badge/流水线-12_Agents_真实派发-8250df)
+![进度](https://img.shields.io/badge/总进度-81%25-2ea44f) ![当前阶段](https://img.shields.io/badge/当前阶段-A10-0969da) ![更新](https://img.shields.io/badge/更新-2026-10-05%2015%3A49-bf8700) ![流水线](https://img.shields.io/badge/流水线-12_Agents_真实派发-8250df)
 
 </div>
 
@@ -20,16 +20,16 @@
 
 | 指标 | 值 |
 |---|---|
-| 当前阶段 | **A9 竞赛论文正文撰写** |
-| 总进度 | **73%**（9 完成 / 1 进行中 / 3 待开始） |
-| 最近更新 | 2026-10-05 15:00 |
+| 当前阶段 | **A10 摘要撰写与全文润色、格式检查** |
+| 总进度 | **81%**（10 完成 / 1 进行中 / 2 待开始） |
+| 最近更新 | 2026-10-05 15:49 |
 
 ```mermaid
 pie showData
     title 任务阶段完成情况
-    "已完成" : 9
+    "已完成" : 10
     "进行中" : 1
-    "待开始" : 3
+    "待开始" : 2
 ```
 
 ## 📋 阶段进度总览
@@ -45,8 +45,8 @@ pie showData
 | **A6** | 代码实现、实验与结果产出（含 Result_提交.xlsx） | ✅ 完成 | code/a6_common.py, a6_q23_common.py, a6_01~06_*.py, output/logs/a6_*.log+阻断上报, output/Result_提交.xlsx, output/tables/q1_*/q2_*/q3_*/附件2_*（R-04/R-07 已仲裁 D24/D25） |
 | **A7** | 结果分析、误差、敏感性与稳健性 | ✅ 完成 | 00_admin/A7_结果分析.md（9 节+8 条局限+给 A9 的 6 条表述红线）, code/a7_01~05_*.py, output/logs/a7_*.log, output/tables/a7_*.csv |
 | **A8** | 论文级图表设计与产出 | ✅ 完成 | output/figures/fig1~fig8（8 张 300dpi，含 fig8 翻转带敏感性）、figures_清单.md（图注+章节映射），code/a8_*.py + 日志 |
-| **A9** | 竞赛论文正文撰写 | 🔄 进行中 | paper/论文.md |
-| **A10** | 摘要撰写与全文润色、格式检查 | ⬜ 待开始 | paper/摘要.md, paper/论文.docx |
+| **A9** | 竞赛论文正文撰写 | ✅ 完成 | paper/论文.md（53.1KB；六项核验全过、约 120 个数字点溯源、11 处事实性修正） |
+| **A10** | 摘要撰写与全文润色、格式检查 | 🔄 进行中 | paper/摘要.md, paper/论文.docx |
 | **A11** | 独立质控：复现、一致性、合规终审 | ⬜ 待开始 | output/logs/qa_check.md, output/logs/qa_programmatic.log |
 | **G9** | 交付打包与最终清单核对 | ⬜ 待开始 | output/交付清单.md |
 
