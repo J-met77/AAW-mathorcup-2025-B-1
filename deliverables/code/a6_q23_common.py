@@ -64,13 +64,25 @@ def make_tree_X(df: pd.DataFrame, cat_ref: dict | None = None):
     if cat_ref is not None:
         for c in CAT_COLS:
             X[c] = X[c].cat.set_categories(cat_ref[c])
-    unseen = {c: int(X[c].isna().sum() - df[FEATURE_COLS][c].isna().sum())
-              for c in CAT_COLS if cat_ref is not None}
+    unseen = {}
+    if cat_ref is not None:
+        for c in CAT_COLS:
+            s = df[FEATURE_COLS][c]
+            if c in ("异常原因", "进线渠道"):
+                s = s.fillna("缺失")
+            unseen[c] = int((s.notna() & ~s.isin(cat_ref[c])).sum())  # 附件2 不在附件1 类别域的取值数
     return X, {c: list(X[c].cat.categories) for c in CAT_COLS}, unseen
 
 
 def capture_cat_ref(df: pd.DataFrame) -> dict:
-    return {c: list(df[c].astype("category").cat.categories) for c in CAT_COLS}
+    """捕获类别域（与 make_tree_X 同构：异常原因/进线渠道先 fillna("缺失")，保证两附件类别域一致）。"""
+    ref = {}
+    for c in CAT_COLS:
+        s = df[c]
+        if c in ("异常原因", "进线渠道"):
+            s = s.fillna("缺失")
+        ref[c] = list(s.astype("category").cat.categories)
+    return ref
 
 
 def decile_strata(y: np.ndarray) -> np.ndarray:

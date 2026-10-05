@@ -4,7 +4,7 @@
 
 **物流理赔风险识别及服务升级 —— 12-Agent 数模竞赛全流程盲测（真实派发模式）**
 
-![进度](https://img.shields.io/badge/总进度-50%25-2ea44f) ![当前阶段](https://img.shields.io/badge/当前阶段-A6-0969da) ![更新](https://img.shields.io/badge/更新-2026-10-05%2010%3A00-bf8700) ![流水线](https://img.shields.io/badge/流水线-12_Agents_真实派发-8250df)
+![进度](https://img.shields.io/badge/总进度-62%25-2ea44f) ![当前阶段](https://img.shields.io/badge/当前阶段-A7-0969da) ![更新](https://img.shields.io/badge/更新-2026-10-05%2010%3A40-bf8700) ![流水线](https://img.shields.io/badge/流水线-12_Agents_真实派发-8250df)
 
 </div>
 
@@ -20,16 +20,16 @@
 
 | 指标 | 值 |
 |---|---|
-| 当前阶段 | **A6 代码实现、实验与结果产出（含 Result_提交.xlsx）** |
-| 总进度 | **50%**（6 完成 / 1 进行中 / 6 待开始） |
-| 最近更新 | 2026-10-05 10:00 |
+| 当前阶段 | **A7 结果分析、误差、敏感性与稳健性** |
+| 总进度 | **62%**（7 完成 / 2 进行中 / 4 待开始） |
+| 最近更新 | 2026-10-05 10:40 |
 
 ```mermaid
 pie showData
     title 任务阶段完成情况
-    "已完成" : 6
-    "进行中" : 1
-    "待开始" : 6
+    "已完成" : 7
+    "进行中" : 2
+    "待开始" : 4
 ```
 
 ## 📋 阶段进度总览
@@ -42,9 +42,9 @@ pie showData
 | **A3** | 数据读取、清洗、缺失/异常处理与特征工程 | ✅ 完成 | code/a3_01~07_*.py, output/logs/a3_01~07*.log, 00_admin/A3_数据报告.md（含 §8 假设核验回填）, output/tables/附件1_clean.csv, output/tables/附件2_clean.csv |
 | **A4** | 三问模型设计（变量/目标/约束/规则） | ✅ 完成 | 00_admin/A4_模型设计.md（决策建议 D12–D21 已仲裁采纳） |
 | **A5** | 求解算法与评估方案设计 | ✅ 完成 | 00_admin/A5_算法方案.md（V1–V8 数值化、评估契约、回退触发器 R-01–R-10） |
-| **A6** | 代码实现、实验与结果产出（含 Result_提交.xlsx） | 🔄 进行中 | code/a6_01~06_*.py, output/logs/, output/Result_提交.xlsx |
-| **A7** | 结果分析、误差、敏感性与稳健性 | ⬜ 待开始 | 00_admin/A7_结果分析.md, output/tables/ |
-| **A8** | 论文级图表设计与产出 | ⬜ 待开始 | output/figures/ |
+| **A6** | 代码实现、实验与结果产出（含 Result_提交.xlsx） | ✅ 完成 | code/a6_common.py, a6_q23_common.py, a6_01~06_*.py, output/logs/a6_*.log+阻断上报, output/Result_提交.xlsx, output/tables/q1_*/q2_*/q3_*/附件2_*（R-04/R-07 已仲裁 D24/D25） |
+| **A7** | 结果分析、误差、敏感性与稳健性 | 🔄 进行中 | 00_admin/A7_结果分析.md, output/tables/ |
+| **A8** | 论文级图表设计与产出 | 🔄 进行中 | output/figures/ |
 | **A9** | 竞赛论文正文撰写 | ⬜ 待开始 | paper/论文.md |
 | **A10** | 摘要撰写与全文润色、格式检查 | ⬜ 待开始 | paper/摘要.md, paper/论文.docx |
 | **A11** | 独立质控：复现、一致性、合规终审 | ⬜ 待开始 | output/logs/qa_check.md, output/logs/qa_programmatic.log |
@@ -52,7 +52,7 @@ pie showData
 
 ## 🏆 成果展示
 
-- *成果将于各阶段完成后在此展示*
+- [📦 提交结果](deliverables/result/)
 - 结果摘要：[deliverables/result/result_摘要.md](deliverables/result/result_摘要.md)（A6 完成后可用）
 - 关键模型结论：见 [PROGRESS.md](PROGRESS.md)「关键模型结论」小节（随阶段实测更新）
 
