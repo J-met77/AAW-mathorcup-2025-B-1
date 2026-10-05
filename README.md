@@ -4,7 +4,7 @@
 
 **物流理赔风险识别及服务升级 —— 12-Agent 数模竞赛全流程盲测（真实派发模式）**
 
-![进度](https://img.shields.io/badge/总进度-42%25-2ea44f) ![当前阶段](https://img.shields.io/badge/当前阶段-A5-0969da) ![更新](https://img.shields.io/badge/更新-2026-10-04%2023%3A00-bf8700) ![流水线](https://img.shields.io/badge/流水线-12_Agents_真实派发-8250df)
+![进度](https://img.shields.io/badge/总进度-50%25-2ea44f) ![当前阶段](https://img.shields.io/badge/当前阶段-A6-0969da) ![更新](https://img.shields.io/badge/更新-2026-10-05%2009%3A15-bf8700) ![流水线](https://img.shields.io/badge/流水线-12_Agents_真实派发-8250df)
 
 </div>
 
@@ -20,16 +20,16 @@
 
 | 指标 | 值 |
 |---|---|
-| 当前阶段 | **A5 求解算法与评估方案设计** |
-| 总进度 | **42%**（5 完成 / 1 进行中 / 7 待开始） |
-| 最近更新 | 2026-10-04 23:00 |
+| 当前阶段 | **A6 代码实现、实验与结果产出（含 Result_提交.xlsx）** |
+| 总进度 | **50%**（6 完成 / 1 进行中 / 6 待开始） |
+| 最近更新 | 2026-10-05 09:15 |
 
 ```mermaid
 pie showData
     title 任务阶段完成情况
-    "已完成" : 5
+    "已完成" : 6
     "进行中" : 1
-    "待开始" : 7
+    "待开始" : 6
 ```
 
 ## 📋 阶段进度总览
@@ -41,8 +41,8 @@ pie showData
 | **A2** | 方法论依据与假设体系建立 | ✅ 完成 | 00_admin/A2_假设.md（假设 A2-01~20、方法论菜单 26 条；假设的数据证实/证伪由 A3 续核回填） |
 | **A3** | 数据读取、清洗、缺失/异常处理与特征工程 | ✅ 完成 | code/a3_01~07_*.py, output/logs/a3_01~07*.log, 00_admin/A3_数据报告.md（含 §8 假设核验回填）, output/tables/附件1_clean.csv, output/tables/附件2_clean.csv |
 | **A4** | 三问模型设计（变量/目标/约束/规则） | ✅ 完成 | 00_admin/A4_模型设计.md（决策建议 D12–D21 已仲裁采纳） |
-| **A5** | 求解算法与评估方案设计 | 🔄 进行中 | 00_admin/A5_算法方案.md |
-| **A6** | 代码实现、实验与结果产出（含 Result_提交.xlsx） | ⬜ 待开始 | code/*.py, output/logs/, output/Result_提交.xlsx |
+| **A5** | 求解算法与评估方案设计 | ✅ 完成 | 00_admin/A5_算法方案.md（V1–V8 数值化、评估契约、回退触发器 R-01–R-10） |
+| **A6** | 代码实现、实验与结果产出（含 Result_提交.xlsx） | 🔄 进行中 | code/a6_01~06_*.py, output/logs/, output/Result_提交.xlsx |
 | **A7** | 结果分析、误差、敏感性与稳健性 | ⬜ 待开始 | 00_admin/A7_结果分析.md, output/tables/ |
 | **A8** | 论文级图表设计与产出 | ⬜ 待开始 | output/figures/ |
 | **A9** | 竞赛论文正文撰写 | ⬜ 待开始 | paper/论文.md |

@@ -145,7 +145,8 @@ base1 = ["行ID", "线路类型", "是否c2c", "是否生鲜妥投及时", "保�
          "始发网点发单量", "始发网点万单理赔率", "始发网点赔付比例",
          "目的网点发单量", "目的网点万单理赔率", "目的网点赔付比例", "实际赔付金额",
          "保价金额_哨兵负值", "始发网点万单理赔率_哨兵负值", "目的网点万单理赔率_哨兵负值", "始发网点发单量_哨兵负值"]
-base2 = [c for c in base1 if c not in ("行ID", "实际赔付金额")]  # 附件2 无行ID 与目标列
+base2 = ["运单号"] + [c for c in base1 if c not in ("行ID", "实际赔付金额")]  # 附件2 首列=运单号；无行ID 与目标列
+assert base2[0] == "运单号" and len(base2) == 1 + len(base1) - 2
 d1 = d1[base1 + [c for c in d1.columns if c not in base1]]
 d2 = d2[base2 + [c for c in d2.columns if c not in base2]]
 
@@ -169,6 +170,8 @@ print(f"一致性抽核：索赔差额定义式回算最大偏差={dd.max():.3g}
       "相对超额∈(0,1)；触墙标记回算一致 : PASS")
 print("附件1_clean 衍生列:", [c for c in r1.columns if c not in base1])
 print("附件2_clean 衍生列:", [c for c in r2.columns if c not in base2])
-print("两表列口径差异：附件1 专有 行ID/实际赔付金额/索赔差额/赔付索赔比/相对超额/两金额_log10；"
-      "附件2 专有 运单号；其余列两表同名同序同口径。")
+print("两表列口径差异：附件1 专有 行ID/实际赔付金额/索赔差额/赔付索赔比/相对超额/实际赔付金额_log10；"
+      "附件2 首列=运单号（与 Result.xlsx 同序）；其余列两表同名同序同口径。")
+print(f"列序核验：附件2 首列={d2.columns[0]}（应为 运单号），附件1 首列={d1.columns[0]}（应为 行ID）")
+assert d2.columns[0] == "运单号" and d1.columns[0] == "行ID"
 print("\nA3-06 特征工程结束。复现路径：a3_03_清洗.py → a3_06_特征工程.py（依次从 data/ 原始文件重建）。")
