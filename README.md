@@ -4,7 +4,7 @@
 
 **物流理赔风险识别及服务升级 —— 12-Agent 数模竞赛全流程盲测（真实派发模式）**
 
-![进度](https://img.shields.io/badge/总进度-50%25-2ea44f) ![当前阶段](https://img.shields.io/badge/当前阶段-A6-0969da) ![更新](https://img.shields.io/badge/更新-2026-10-05%2009%3A15-bf8700) ![流水线](https://img.shields.io/badge/流水线-12_Agents_真实派发-8250df)
+![进度](https://img.shields.io/badge/总进度-50%25-2ea44f) ![当前阶段](https://img.shields.io/badge/当前阶段-A6-0969da) ![更新](https://img.shields.io/badge/更新-2026-10-05%2010%3A00-bf8700) ![流水线](https://img.shields.io/badge/流水线-12_Agents_真实派发-8250df)
 
 </div>
 
@@ -22,7 +22,7 @@
 |---|---|
 | 当前阶段 | **A6 代码实现、实验与结果产出（含 Result_提交.xlsx）** |
 | 总进度 | **50%**（6 完成 / 1 进行中 / 6 待开始） |
-| 最近更新 | 2026-10-05 09:15 |
+| 最近更新 | 2026-10-05 10:00 |
 
 ```mermaid
 pie showData
